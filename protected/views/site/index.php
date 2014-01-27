@@ -5,7 +5,7 @@ $this->pageTitle=Yii::app()->name;
 ?>
 
 <h1><font size=4 color=blue face=verdana> Sales Application</font></h1>
-<p><font size=2 color=magenta face=courier>created using Yii application.</font></p>
+<p><font size=2 color=magenta face=courier>created using Yii template app.</font></p>
 
 <p>You may change the content of this page by modifying the following two files:</p>
 <ul>
