@@ -21,11 +21,11 @@
 	<?php echo CHtml::encode($data->stock); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('price')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Inventoryprice')); ?>:</b>
 	<?php echo CHtml::encode($data->price); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('value')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Inventory value')); ?>:</b>
 	<?php echo CHtml::encode($data->value); ?>
 	<br />
 

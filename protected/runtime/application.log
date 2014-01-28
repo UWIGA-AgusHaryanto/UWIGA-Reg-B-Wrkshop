@@ -9163,3 +9163,33 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/agusapp/index.php/gii/crud/fancybox/fancy_nav_right.png
 ---
+2014/01/28 16:49:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "git".' in C:\xampp\htdocs\agusapp\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\agusapp\framework\web\CWebApplication.php(141): CWebApplication->runController('git')
+#1 C:\xampp\htdocs\agusapp\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\agusapp\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/agusapp/index.php/git
+---
+2014/01/28 17:02:26 [error] [php] include(Sales.php): failed to open stream: No such file or directory (C:\xampp\htdocs\agusapp\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\agusapp\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\xampp\htdocs\agusapp\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\xampp\htdocs\agusapp\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\xampp\htdocs\agusapp\protected\controllers\SalesController.php(125): CActiveDataProvider->__construct()
+#4 C:\xampp\htdocs\agusapp\framework\web\actions\CInlineAction.php(49): SalesController->actionIndex()
+#5 C:\xampp\htdocs\agusapp\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\agusapp\framework\web\filters\CFilterChain.php(133): SalesController->runAction()
+#7 C:\xampp\htdocs\agusapp\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\agusapp\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\xampp\htdocs\agusapp\framework\web\filters\CInlineFilter.php(58): SalesController->filterAccessControl()
+#10 C:\xampp\htdocs\agusapp\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\xampp\htdocs\agusapp\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\agusapp\framework\web\CController.php(265): SalesController->runActionWithFilters()
+#13 C:\xampp\htdocs\agusapp\framework\web\CWebApplication.php(282): SalesController->run()
+#14 C:\xampp\htdocs\agusapp\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\xampp\htdocs\agusapp\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\agusapp\index.php(13): CWebApplication->run()
+REQUEST_URI=/agusapp/index.php/Sales
+in C:\xampp\htdocs\agusapp\protected\controllers\SalesController.php (125)
+in C:\xampp\htdocs\agusapp\index.php (13)

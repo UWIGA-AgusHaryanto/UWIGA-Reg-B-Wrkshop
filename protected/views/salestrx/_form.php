@@ -1,13 +1,13 @@
 <?php
-/* @var $this SalesController */
-/* @var $model Sales */
+/* @var $this SalestrxController */
+/* @var $model Salestrx */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'sales-form',
+	'id'=>'salestrx-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -20,33 +20,33 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'salesid'); ?>
-		<?php echo $form->textField($model,'salesid',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'salesid'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'trxdate'); ?>
 		<?php echo $form->textField($model,'trxdate'); ?>
 		<?php echo $form->error($model,'trxdate'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'custid'); ?>
-		<?php echo $form->textField($model,'custid',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'custid'); ?>
+		<?php echo $form->labelEx($model,'total'); ?>
+		<?php echo $form->textField($model,'total'); ?>
+		<?php echo $form->error($model,'total'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'productid'); ?>
-		<?php echo $form->textField($model,'productid',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'productid'); ?>
+		<?php echo $form->labelEx($model,'pay_type'); ?>
+		<?php echo $form->textField($model,'pay_type',array('size'=>3,'maxlength'=>3)); ?>
+		<?php echo $form->error($model,'pay_type'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'qty'); ?>
-		<?php echo $form->textField($model,'qty'); ?>
-		<?php echo $form->error($model,'qty'); ?>
+		<?php echo $form->labelEx($model,'(1=Cash/0=Credit)'); ?>
+		<?php echo $form->textField($model,'pay_status'); ?>
+		<?php echo $form->error($model,'pay_status'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'Custid'); ?>
+		<?php echo $form->textField($model,'Custid',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($model,'Custid'); ?>
 	</div>
 
 	<div class="row buttons">

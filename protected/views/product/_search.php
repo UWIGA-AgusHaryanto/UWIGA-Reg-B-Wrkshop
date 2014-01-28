@@ -32,12 +32,12 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'price'); ?>
+		<?php echo $form->label($model,'Inventory price'); ?>
 		<?php echo $form->textField($model,'price'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'value'); ?>
+		<?php echo $form->label($model,'Inventory value'); ?>
 		<?php echo $form->textField($model,'value'); ?>
 	</div>
 

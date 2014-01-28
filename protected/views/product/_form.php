@@ -44,13 +44,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'price'); ?>
+		<?php echo $form->labelEx($model,'Inventory price'); ?>
 		<?php echo $form->textField($model,'price'); ?>
 		<?php echo $form->error($model,'price'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'value'); ?>
+		<?php echo $form->labelEx($model,'Inventory value'); ?>
 		<?php echo $form->textField($model,'value'); ?>
 		<?php echo $form->error($model,'value'); ?>
 	</div>

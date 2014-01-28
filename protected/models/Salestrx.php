@@ -1,23 +1,29 @@
 <?php
 
 /**
- * This is the model class for table "sales".
+ * This is the model class for table "salestrx".
  *
- * The followings are the available columns in table 'sales':
- * @property string $salesid
+ * The followings are the available columns in table 'salestrx':
+ * @property integer $salestrxId
  * @property string $trxdate
- * @property string $custid
- * @property string $productid
- * @property integer $qty
+ * @property double $total
+ * @property string $pay_type
+ * @property integer $pay_status
+ * @property string $Custid
+ *
+ * The followings are the available model relations:
+ * @property Billing[] $billings
+ * @property Customer $cust
+ * @property Product[] $products
  */
-class Sales extends CActiveRecord
+class Salestrx extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'sales';
+		return 'salestrx';
 	}
 
 	/**
@@ -28,12 +34,14 @@ class Sales extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('qty', 'numerical', 'integerOnly'=>true),
-			array('salesid, custid, productid', 'length', 'max'=>10),
+			array('pay_status', 'numerical', 'integerOnly'=>true),
+			array('total', 'numerical'),
+			array('pay_type', 'length', 'max'=>3),
+			array('Custid', 'length', 'max'=>10),
 			array('trxdate', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('salesid, trxdate, custid, productid, qty', 'safe', 'on'=>'search'),
+			array('salestrxId, trxdate, total, pay_type, pay_status, Custid', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,6 +53,9 @@ class Sales extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'billings' => array(self::HAS_MANY, 'Billing', 'salestrxid'),
+			'cust' => array(self::BELONGS_TO, 'Customer', 'Custid'),
+			'products' => array(self::MANY_MANY, 'Product', 'salestrxdetail(salestrxid, productid)'),
 		);
 	}
 
@@ -54,11 +65,12 @@ class Sales extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'salesid' => 'Salesid',
+			'salestrxId' => 'Salestrx',
 			'trxdate' => 'Trxdate',
-			'custid' => 'Custid',
-			'productid' => 'Productid',
-			'qty' => 'Qty',
+			'total' => 'Total',
+			'pay_type' => 'Pay Type',
+			'pay_status' => 'Pay Status',
+			'Custid' => 'Custid',
 		);
 	}
 
@@ -80,11 +92,12 @@ class Sales extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('salesid',$this->salesid,true);
+		$criteria->compare('salestrxId',$this->salestrxId);
 		$criteria->compare('trxdate',$this->trxdate,true);
-		$criteria->compare('custid',$this->custid,true);
-		$criteria->compare('productid',$this->productid,true);
-		$criteria->compare('qty',$this->qty);
+		$criteria->compare('total',$this->total);
+		$criteria->compare('pay_type',$this->pay_type,true);
+		$criteria->compare('pay_status',$this->pay_status);
+		$criteria->compare('Custid',$this->Custid,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -95,7 +108,7 @@ class Sales extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Sales the static model class
+	 * @return Salestrx the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

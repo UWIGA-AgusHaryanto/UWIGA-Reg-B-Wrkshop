@@ -1,18 +1,18 @@
 <?php
-/* @var $this SalesController */
+/* @var $this SalestrxController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Sales',
+	'Salestrxes',
 );
 
 $this->menu=array(
-	array('label'=>'Create Sales', 'url'=>array('create')),
-	array('label'=>'Manage Sales', 'url'=>array('admin')),
+	array('label'=>'Create Salestrx', 'url'=>array('create')),
+	array('label'=>'Manage Salestrx', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Sales</h1>
+<h1>Salestrxes</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
