@@ -35,6 +35,7 @@
                                 array('label'=>'Product', 'url'=>array('/Product')),
                                 array('label'=>'Customer', 'url'=>array('/Customer')),
                                 array('label'=>'Sales', 'url'=>array('/Salestrx')),
+                                array('label'=>'Sales Detail', 'url'=>array('/Salestrxdetail')),
                                 array('label'=>'Customer-Sales-Config', 'url'=>array('/Customersalesconfig')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

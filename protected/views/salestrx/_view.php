@@ -17,7 +17,7 @@
 	<?php echo CHtml::encode($data->total); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('(1=Cash/0=Credit)')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('pay_type 1=Cash/0=Credit')); ?>:</b>
 	<?php echo CHtml::encode($data->pay_type); ?>
 	<br />
 

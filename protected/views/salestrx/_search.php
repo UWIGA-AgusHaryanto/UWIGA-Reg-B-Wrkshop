@@ -27,7 +27,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'(1=Cash/0=Credit)'); ?>
+		<?php echo $form->label($model,'pay_type 1=Cash/0=Credit'); ?>
 		<?php echo $form->textField($model,'pay_type',array('size'=>3,'maxlength'=>3)); ?>
 	</div>
 

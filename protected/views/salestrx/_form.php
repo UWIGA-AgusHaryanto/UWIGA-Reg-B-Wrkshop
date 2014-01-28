@@ -32,13 +32,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'pay_type'); ?>
+		<?php echo $form->labelEx($model,'pay_type 1=Cash/0=Credit'); ?>
 		<?php echo $form->textField($model,'pay_type',array('size'=>3,'maxlength'=>3)); ?>
 		<?php echo $form->error($model,'pay_type'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'(1=Cash/0=Credit)'); ?>
+		<?php echo $form->labelEx($model,'(pay_status)'); ?>
 		<?php echo $form->textField($model,'pay_status'); ?>
 		<?php echo $form->error($model,'pay_status'); ?>
 	</div>
