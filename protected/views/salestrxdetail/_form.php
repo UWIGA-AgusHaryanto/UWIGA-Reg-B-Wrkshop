@@ -55,6 +55,12 @@
 		<?php echo $form->error($model,'subtotal'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'PriceId'); ?>
+		<?php echo $form->textField($model,'PriceId'); ?>
+		<?php echo $form->error($model,'PriceId'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

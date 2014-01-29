@@ -11,6 +11,7 @@
  * @property double $price
  * @property double $discount
  * @property double $subtotal
+ * @property integer $PriceId
  */
 class Salestrxdetail extends CActiveRecord
 {
@@ -30,12 +31,12 @@ class Salestrxdetail extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('salestrxid', 'numerical', 'integerOnly'=>true),
+			array('salestrxid, PriceId', 'numerical', 'integerOnly'=>true),
 			array('qty, price, discount, subtotal', 'numerical'),
 			array('productid', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, salestrxid, productid, qty, price, discount, subtotal', 'safe', 'on'=>'search'),
+			array('id, salestrxid, productid, qty, price, discount, subtotal, PriceId', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,6 +64,7 @@ class Salestrxdetail extends CActiveRecord
 			'price' => 'Price',
 			'discount' => 'Discount',
 			'subtotal' => 'Subtotal',
+			'PriceId' => 'PriceId',
 		);
 	}
 
@@ -91,6 +93,7 @@ class Salestrxdetail extends CActiveRecord
 		$criteria->compare('price',$this->price);
 		$criteria->compare('discount',$this->discount);
 		$criteria->compare('subtotal',$this->subtotal);
+		$criteria->compare('PriceId',$this->PriceId);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

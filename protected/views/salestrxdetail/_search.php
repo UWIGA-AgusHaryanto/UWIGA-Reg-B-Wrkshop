@@ -46,6 +46,11 @@
 		<?php echo $form->textField($model,'subtotal'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'PriceId'); ?>
+		<?php echo $form->textField($model,'PriceId'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

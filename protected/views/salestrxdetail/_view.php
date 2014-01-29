@@ -32,6 +32,16 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('subtotal')); ?>:</b>
 	<?php echo CHtml::encode($data->subtotal); ?>
 	<br />
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('PriceId')); ?>:</b>
+	<?php echo CHtml::encode($data->PriceId); ?>
+	<br />
 
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('PriceId')); ?>:</b>
+	<?php echo CHtml::encode($data->PriceId); ?>
+	<br />
+
+	*/ ?>
 
 </div>

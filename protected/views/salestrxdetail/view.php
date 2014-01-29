@@ -28,5 +28,6 @@ $this->menu=array(
 		'price',
 		'discount',
 		'subtotal',
+		'PriceId',
 	),
 )); ?>
