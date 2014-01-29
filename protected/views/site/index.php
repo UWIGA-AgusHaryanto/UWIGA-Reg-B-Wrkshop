@@ -11,6 +11,7 @@ $this->pageTitle=Yii::app()->name;
 <ul>
 	<li>View file: <code><?php echo __FILE__; ?></code></li>
 	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
+      
 </ul>
 
 <p>For more details on how to further develop this application, please read
